@@ -1,0 +1,66 @@
+body {
+  font-family: system-ui, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 2rem;
+  background-color: #f5f5f5;
+}
+
+.btn-modal {
+  padding: 0.75rem 1.5rem;
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.btn-modal:hover {
+  background-color: #005fa3;
+}
+
+/* Overlay (latar belakang hitam transparan) */
+.overlay {
+  display: none; /* disembunyikan dulu */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+/* Kotak modal */
+.modal {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.btn-tutup {
+  margin-top: 1rem;
+  padding: 0.5rem 1.2rem;
+  background-color: #cc0000;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.btn-tutup:hover {
+  background-color: #a30000;
+}
+
+.overlay.open {
+  display: flex; 
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
